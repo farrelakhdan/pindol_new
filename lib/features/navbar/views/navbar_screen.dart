@@ -18,7 +18,7 @@ class _NavbarScreenState extends State<NavbarScreen> {
         return Scaffold(
           body: dashboardProvider.pages[dashboardProvider.selectedIndex],
           bottomNavigationBar: BottomAppBar(
-            height: 70,
+            height: 50,
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 0),

@@ -1,5 +1,3 @@
-import 'package:bootstrap_icons/bootstrap_icons.dart';
-import 'package:feather_icons/feather_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:pindol_new/core/state/finite_state.dart';
 import 'package:pindol_new/features/home/models/model/menu_model.dart';

@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:pindol_new/core/constant/colors.dart';
 import 'package:pindol_new/core/constant/font_size.dart';
 import 'package:pindol_new/features/home/provider/home_provider.dart';
+import 'package:pindol_new/features/home/widget/section/list_barang_section.dart';
 import 'package:pindol_new/features/home/widget/section/menu_section.dart';
+import 'package:pindol_new/features/home/widget/section/promo_section.dart';
+import 'package:pindol_new/features/home/widget/section/saran_section.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -99,13 +102,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      child: Column(
-                        children: [
-                          MenuSection(),
-                        ],
-                      ),
+                    const Column(
+                      children: [
+                        MenuSection(),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        PromoSection(),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        SaranSection(),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        ListBarangSection(),
+                      ],
                     )
                   ],
                 ),

@@ -42,8 +42,8 @@ class MenuSection extends StatelessWidget {
         Consumer<HomeProvider>(builder: (context, homeProvider, _) {
           return Container(
             width: double.infinity,
-            decoration: BoxDecoration(
-                border: Border.all(width: 1, color: Colors.black)),
+            // decoration: BoxDecoration(
+            //     border: Border.all(width: 1, color: Colors.black)),
             child: GridView.count(
               padding: const EdgeInsets.symmetric(horizontal: 0),
               physics: const NeverScrollableScrollPhysics(),

@@ -44,5 +44,3 @@ Widget menuItem(
     ),
   );
 }
-
-class Shimmer {}

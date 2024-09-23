@@ -8,6 +8,7 @@ import 'package:pindol_new/features/navbar/provider/navbar_provider.dart';
 import 'package:pindol_new/features/auth/provider/auth_provider.dart';
 import 'package:pindol_new/features/auth/provider/register_provider.dart';
 import 'package:pindol_new/features/navbar/views/navbar_screen.dart';
+import 'package:pindol_new/features/produk/provider/produk_provider.dart';
 import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => HomeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProdukProvider(),
         ),
       ],
       child: MaterialApp(
