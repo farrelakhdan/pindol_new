@@ -1,9 +1,12 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pindol_new/core/constant/font_weigth.dart';
+import 'package:pindol_new/features/auth/widget/login_button.dart';
+import 'package:pindol_new/features/checkout/views/pembayaran_success_screen.dart';
 import 'package:pindol_new/features/checkout/widget/alamat_widget.dart';
 import 'package:pindol_new/features/checkout/widget/detail_widget.dart';
+import 'package:pindol_new/features/checkout/widget/metode_pembayaran_widget.dart';
 import 'package:pindol_new/features/checkout/widget/pembayaran_widget.dart';
 import 'package:pindol_new/features/checkout/widget/pengiriman_widget.dart';
 
@@ -24,23 +27,38 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           children: [
             ListView(
               shrinkWrap: true,
-              children: const [
-                SizedBox(
+              children: [
+                const SizedBox(
                   height: 70,
                 ),
-                AlamatWidget(),
-                SizedBox(
+                const AlamatWidget(),
+                const SizedBox(
                   height: 10,
                 ),
-                DetailWidget(),
-                SizedBox(
+                const DetailWidget(),
+                const SizedBox(
                   height: 10,
                 ),
-                PengirimanWidget(),
-                SizedBox(
+                const PengirimanWidget(),
+                const SizedBox(
                   height: 10,
                 ),
-                PembayaranWidget()
+                const PembayaranWidget(),
+                const SizedBox(
+                  height: 10,
+                ),
+                const MetodePembayaranWidget(),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  child: LoginButton(
+                      onPressed: () {
+                        Navigator.of(context).push(CupertinoPageRoute(
+                            builder: (context) =>
+                                const PembayaranSuccessScreen()));
+                      },
+                      title: "Bayar Sekarang"),
+                )
               ],
             ),
             Container(

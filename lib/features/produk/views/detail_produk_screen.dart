@@ -11,6 +11,8 @@ import 'package:pindol_new/features/produk/widget/content_header_widget.dart';
 import 'package:pindol_new/features/produk/widget/header_widget.dart';
 import 'package:pindol_new/features/produk/widget/produk_lain_widget.dart';
 import 'package:pindol_new/features/produk/widget/sub_body_widget.dart';
+import 'package:pindol_new/features/toko/provider/toko_provider.dart';
+import 'package:pindol_new/features/toko/views/toko_profile_screen.dart';
 import 'package:provider/provider.dart';
 
 class DetailProdukScreen extends StatefulWidget {
@@ -59,7 +61,11 @@ class _DetailProdukScreenState extends State<DetailProdukScreen> {
                 ContentHeaderWidget(
                   title: 'Lainnya di toko ini',
                   desc: 'Dipilih - dipilih!!',
-                  func: () {},
+                  func: () {
+                    context.read<TokoProvider>().setTab(1);
+                    Navigator.of(context).push(CupertinoPageRoute(
+                        builder: (context) => const TokoProfileScreen()));
+                  },
                 ),
                 const ProdukLainWidget(),
                 ContentHeaderWidget(
